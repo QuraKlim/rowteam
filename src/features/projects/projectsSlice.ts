@@ -5,6 +5,7 @@ export enum EStatus {
   LOADING = "loading",
   ERROR = "error",
   IDLE = "idle",
+  NO_RESULT = "no_results",
 }
 
 export interface IProject {
@@ -79,7 +80,11 @@ export const projectsSlice = createSlice({
     builder.addCase(
       fetchProjectsByTitle.fulfilled,
       (state, action: IAction<{ items: IProject[]; total_count: number }>) => {
-        state.status = EStatus.IDLE;
+        if (action.payload.items.length) {
+          state.status = EStatus.IDLE;
+        } else {
+          state.status = EStatus.NO_RESULT;
+        }
         state.projectsList = action.payload.items;
         state.total = action.payload.total_count;
       }

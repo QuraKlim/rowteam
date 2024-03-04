@@ -10,7 +10,15 @@ export const ProjectsList = () => {
     <div>
       <section className="relative">
         {status === EStatus.LOADING && (
-          <h1 className={styles.header}>Поиск проектов ...</h1>
+          <h1 className={projectsList.length ? styles.header : ""}>
+            Поиск проектов ...
+          </h1>
+        )}
+        {status === EStatus.NO_RESULT && (
+          <h1>Результатов, удволетворяющих запросу, не найдено</h1>
+        )}
+        {status === EStatus.ERROR && (
+          <h1>Произошла ошибка при обращении к серверу, попробуйте позднее</h1>
         )}
         <div
           className={`${styles.projects} ${
