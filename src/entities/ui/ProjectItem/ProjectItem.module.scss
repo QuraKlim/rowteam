@@ -1,0 +1,74 @@
+.card {
+  width: 100%;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link_to {
+  display: block;
+  margin-top: 20px;
+}
+
+.owner {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+  &_photo {
+    border-radius: 100%;
+    height: 50px;
+    width: auto;
+  }
+}
+
+.info {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 10px;
+  &_item {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.comment {
+  display: flex;
+  margin-top: 15px;
+  &_input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &_button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    &_image {
+      height: 40px;
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .comment {
+    &_button {
+      &_image {
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .comment {
+    &_button {
+      &_image {
+        height: 20px;
+      }
+    }
+  }
+}

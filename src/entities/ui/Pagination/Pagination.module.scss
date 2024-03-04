@@ -1,0 +1,53 @@
+.buttons {
+  display: grid;
+  grid-template-rows: 50px;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1px;
+  background-color: var(--grey-color);
+  padding: 1px;
+  .empty {
+    background-color: white;
+  }
+  button {
+    border-radius: 0;
+  }
+}
+._3 {
+  grid-template-columns: repeat(3, 50px);
+}
+._5 {
+  grid-template-columns: repeat(5, 50px);
+}
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_back {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .buttons {
+    grid-template-rows: 40px;
+  }
+  ._3 {
+    grid-template-columns: repeat(3, 40px);
+  }
+  ._5 {
+    grid-template-columns: repeat(5, 40px);
+  }
+}
+
+@media (max-width: 769px) {
+  .buttons {
+    grid-template-rows: 36px;
+  }
+  ._3 {
+    grid-template-columns: repeat(3, 35px);
+  }
+  ._5 {
+    grid-template-columns: repeat(5, 35px);
+  }
+}

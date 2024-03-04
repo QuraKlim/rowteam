@@ -1,0 +1,9 @@
+.owner {
+  display: flex;
+  gap: 10px;
+  &_photo {
+    height: 30px;
+    border-radius: 100%;
+    width: auto;
+  }
+}

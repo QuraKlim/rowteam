@@ -1,0 +1,25 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 25px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 50vh;
+}
+
+@media (max-width: 1200px) {
+  .projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 769px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
