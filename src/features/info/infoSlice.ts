@@ -1,13 +1,11 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchProjects } from "api/projectsApi";
-import { info } from "console";
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface InfoState {
   perPage: number;
   page: number;
 }
 
-const storagePerPage = localStorage.getItem("perPage") ?? 30;
+const storagePerPage = localStorage.getItem("perPage") ?? 6;
 const storagePage = localStorage.getItem("page") ?? 1;
 
 const initialState: InfoState = {

@@ -1,5 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchProjects } from "api/projectsApi";
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface IToast {
   title: string;
